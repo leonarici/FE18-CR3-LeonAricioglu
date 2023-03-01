@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartItems">
+        <td>{{ item.title }}</td>
+        <td>{{ item.price | currency:'EUR' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-danger" (click)="clearCart()">Clear Cart</button>
+  

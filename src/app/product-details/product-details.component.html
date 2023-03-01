@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div *ngIf="product" class="row">
+      <div class="col-md-6">
+        <img src="{{product.picture}}" alt="{{product.title}}" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h3>{{product.title}}</h3>
+        <h4>{{product.price | currency:'EUR'}}</h4>
+        <p>{{product.longDescription}}</p>
+        <button (click)="addToCart()" class="btn btn-primary">Order</button>
+      </div>
+    </div>
+  </div>
+  
